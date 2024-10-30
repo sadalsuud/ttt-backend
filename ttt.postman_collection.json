@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "b1363f4c-f1c6-4c86-a24d-ca6207877293",
+		"name": "ttt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2065918"
+	},
+	"item": [
+		{
+			"name": "tareas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiMjQxMzI0LWYwNWYtNDgxZS05NGFjLTJlY2YzYTA0MDc0MCIsImlhdCI6MTczMDMwODkxNywiZXhwIjoxNzMwMzE2MTE3fQ.Q61IZf_YkMrY4_2GZ9sVOWuzl928A7nzbsFRMM4PuNU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/tarea/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tarea",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tarea nueva",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJlMjM3YjFmLTQyNWMtNDhiYS05NWRmLTBjMTdlZDJjNTdiZSIsImlhdCI6MTczMDMwNTE0OSwiZXhwIjoxNzMwMzEyMzQ5fQ.vTS1sHHfn_-9qcURRby3nxPz4van1pb_G5Rjo4Sspo8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\": \"mi primera tarea\",\n    \"descripcion\": \"Al principio lo primero\",\n    \"vencimiento\": \"2024-10-31\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/tarea",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tarea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nuevo usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"lacasadelduende11@gmail.com\",\n    \"password\": \"123Abc\",\n    \"nombre\": \"Daniel Mendez\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "tarea editada",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJlMjM3YjFmLTQyNWMtNDhiYS05NWRmLTBjMTdlZDJjNTdiZSIsImlhdCI6MTczMDMwNTE0OSwiZXhwIjoxNzMwMzEyMzQ5fQ.vTS1sHHfn_-9qcURRby3nxPz4van1pb_G5Rjo4Sspo8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\": \"tarea cambiada\",\n    \"descripcion\": \"Ya cambiaron las cosas\",\n    \"vencimiento\": \"2024-11-11\",\n    \"estado\": \"en progreso\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/tarea/f9131aa1-9bab-41a0-a894-10c8c8639cd3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tarea",
+						"f9131aa1-9bab-41a0-a894-10c8c8639cd3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tarea borrada",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiMjQxMzI0LWYwNWYtNDgxZS05NGFjLTJlY2YzYTA0MDc0MCIsImlhdCI6MTczMDMwODkxNywiZXhwIjoxNzMwMzE2MTE3fQ.Q61IZf_YkMrY4_2GZ9sVOWuzl928A7nzbsFRMM4PuNU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/tarea/9bb9bd0c-0a94-4534-ae4f-aa6de9185434",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tarea",
+						"9bb9bd0c-0a94-4534-ae4f-aa6de9185434"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
