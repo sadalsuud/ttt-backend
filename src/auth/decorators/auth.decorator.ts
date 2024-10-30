@@ -10,6 +10,3 @@ export function Auth(...roles: ValidRoles[]) {
     UseGuards(AuthGuard(), UserRoleGuard),
   );
 }
-
-//TODO: debería crear otro decorador acá que a la larga es una función mas poder
-// validar que sí tenga un rol definido...
